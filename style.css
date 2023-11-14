@@ -1,0 +1,501 @@
+/* -----------------------------------------------------Global---------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+    font-family: 'Jomhuria', serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Playpen Sans', cursive;
+    font-family: 'Roboto Slab', serif;
+}
+.title {
+    margin: 40px auto;
+    width: fit-content;
+    font-weight: bold;
+    position: relative;
+}
+.title::before {
+    content: "";
+    width: 80%;
+    height: 10px;
+    border: solid 1px #FF305B;
+    border-left: none;
+    border-right: none;
+    margin: 2px auto;
+    position: absolute;
+    top: 110%;
+    left: 10%;
+}
+.title::after {
+    content: "";
+    width: 200%;
+    height: 1px;
+    background-color: #FF305B;
+    position: absolute;
+    top: 133%;
+    left: -50%;
+}
+.btn {
+    margin: 30px 10px;
+    color: white;
+    padding: 10px;
+    background-color: #FF305B;
+}
+.btn a {
+    text-decoration: none;
+    color: white;
+}
+/* ---------------------------------------------------------- start Nav ----------------------------------------------------*/
+nav {
+    background-color: rgb(70, 70, 71);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    overflow: auto;
+    z-index: 9999;
+}
+nav span a {
+    text-decoration: none;
+    color: #FF305B;
+    margin: 10px 10%;
+    font-size: 30px;
+    float: left;
+}
+nav div {
+    float: right;
+    margin-right: 20px;
+}
+nav div ul {
+    list-style-type: none;
+    margin: auto;
+}
+nav div ul li {
+    float: left;
+    margin: 15px 20px;
+    font-weight: bold;
+}
+nav div ul li a {
+    text-decoration: none;
+    color: white;
+}
+nav div ul li a:hover {
+    color: #FF305B;
+}
+nav div .icon {
+    display: none;
+}
+@media (max-width:991px) {
+    nav div ul {
+        display: none;
+    }
+    nav div .icon {
+        display: block;
+        margin: 20px;
+    }
+}
+/* ----------------------------------------------- end nav --------------------------------------------------------------*/
+/* ---------------------------------------------- start home ------------------------------------------------------------*/
+.home {
+    width: 100%;
+    position: relative;
+}
+.home div img {
+    width: 100%;
+    height: 100vh;
+}
+.home .child-home {
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+    color: white;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+}
+.home .child-home .description {
+    text-align: center;
+}
+.home .child-home .description h3 {
+    font-size: 20px;
+    padding: 10px;
+}
+.home .child-home .description h1 {
+    font-size: 50px;
+    padding: 10px;
+    color: #FF305B;
+    font-weight: bold;
+}
+.home .child-home .description h4 .des {
+    animation: designer 2s ease 0s infinite alternate none;
+}
+.home .child-home .description h4 .dev {
+    animation: developer 2s ease 2s infinite alternate none;
+}
+@keyframes designer {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes developer {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+/*--------------------------------------------------------End home------------------------------------------------------------------*/
+/* --------------------------------------------------------start About------------------------------------------------------------ */
+.about {
+    margin: 50px 0;
+    width: 100%;
+    overflow: auto;
+    padding: 20px;
+}
+.about .image {
+    position: relative;
+    width: 25%;
+    margin-left: 100px;
+    float: left;
+    border: 8px solid #5a5959;
+    border-radius: 2%;
+}
+.about .image .bg {
+    width: 100%;
+    position: absolute;
+    top: -120%;
+    height: 100%;
+    left: 20px;
+    background-color: rgba(0, 0, 0, .5);
+    transition-duration: .5s;
+    z-index: 5;
+}
+.about .image .about-container {
+    width: 100%;
+    overflow: hidden;
+}
+.about .image .bg a i {
+    top: 40%;
+    left: 40%;
+    margin: 10px;
+}
+.about .image:hover .bg {
+    top: 20px;
+    left: 20px;
+}
+.about .image img {
+    width: 100%;
+    float: left;
+    transform: translate(20px, 20px);
+}
+.about .about-text {
+    width: 50%;
+    float: right;
+    margin-right: 50px;
+}
+.about .about-text h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #FF305B;
+    width: 5px;
+    height: 100%;
+    color: #FF305B;
+}
+.about .about-text h2 {
+    padding-left: 15px;
+    margin: 20px 0;
+    position: relative;
+}
+.about .about-text p {
+    width: 70%;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    color: #5a5959;
+}
+.about .about-text ul {
+    list-style-type: none;
+    overflow: auto;
+}
+.about .about-text ul li {
+    float: left;
+    width: 40%;
+    margin: 20px 20px 0 0;
+}
+.about .about-text .btn .material-icons {
+    color: white;
+    padding-left: 5px;
+}
+/* -----------------------------------------------------end About----------------------------------------------------- */
+/*----------------------------------------------------- Start Services----------------------------------------------------- */
+.services {
+    background-color: #F1F1F1;
+    padding: 10px;
+}
+.services .child-services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.services .section {
+    width: calc(70%/4);
+    margin: 40px 0;
+    padding: 20px;
+    text-align: center;
+    transition-duration: 1s;
+}
+.services .section h3 {
+    margin: 20px 0;
+}
+.services .section p {
+    margin: 10px 0;
+    color: #5a5959;
+}
+.services .section:hover {
+    background-color: white;
+}
+@media (max-width:991px) {
+    .services .section {
+        width: calc(70%/2);
+    }
+}
+/* End Services */
+@media (max-width:768px) {
+    .services .section {
+        width: 70%;
+    }
+}
+/*  -----------------------------------------------------End Services -----------------------------------------------------*/
+/* -----------------------------------------------------Start Portfolio----------------------------------------------------- */
+.portfolio {
+    width: 100%;
+    padding: 10px;
+}
+.portfolio .btns {
+    text-align: center;
+    padding: 10px;
+}
+.portfolio .btns button {
+    border: none;
+    background-color: transparent;
+    padding: 0 10px;
+}
+.btns button:hover {
+    cursor: pointer;
+    color: #FF305B;
+}
+.portfolio .products {
+    width: 100%;
+    margin-bottom: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.portfolio .products .photo {
+    width: 26%;
+    margin: 5px;
+    position: relative;
+}
+.portfolio .products .photo img {
+    width: 100%;
+}
+.portfolio .products .photo .bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: .5s;
+}
+.portfolio .products .photo .bg i {
+    color: #FF305B;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    transition: 0.5s;
+}
+.portfolio .products .photo:hover .bg {
+    opacity: 1;
+}
+@media (max-width:991px) {
+    .portfolio .products .photo {
+        width: 40%;
+    }
+}
+@media (max-width:768px) {
+    .portfolio .products .photo {
+        width: 70%;
+    }
+}
+/*----------------------------------------------------- End Portfolio----------------------------------------------------- */
+/* -----------------------------------------------------Start Static -----------------------------------------------------*/
+.static {
+    margin-top: 50px;
+    padding: 50px 0;
+    width: 100%;
+    background-color: #F1F1F1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.static .stat {
+    width: 15%;
+    text-align: center;
+    padding: 10px;
+}
+.static .stat h3 {
+    padding: 10px;
+}
+.static .stat h5 {
+    color: #5a5959;
+}
+/* -----------------------------------------------------End Static -----------------------------------------------------*/
+/* -----------------------------------------------------Start testimonial----------------------------------------------------- */
+.testimonial {
+    width: 100%;
+}
+.testimonial .testimonial-container {
+    width: 50%;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #F1F1F1;
+    overflow: auto;
+}
+.testimonial .testimonial-container img {
+    width: 120px;
+    padding-right: 20px;
+    margin-bottom: 50px;
+    border-radius: 50%;
+    float: left;
+}
+.testimonial .testimonial-container h3 {
+    padding: 20px 0;
+}
+.testimonial .testimonial-container a {
+    text-decoration: none;
+    color: #5a5959;
+}
+.testimonial .testimonial-container p {
+    padding: 20px;
+    font-style: italic;
+}
+/*----------------------------------------------------- End testimonial----------------------------------------------------- */
+/* -----------------------------------------------------Start blog ----------------------------------------------------- */
+.blog {
+    width: 100%;
+    background-color: #F1F1F1;
+    padding: 50px 0;
+}
+.blog .blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.blog .blog-container div {
+    margin-left: 3%;
+    margin-bottom: 3%;
+    padding: 10px;
+    width: 20%;
+    background-color: white;
+}
+.blog .blog-container div a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    transition-duration: .5s;
+}
+.blog .blog-container div a iframe {
+    width: 100%;
+}
+.blog .blog-container div a:hover {
+    color: #FF305B;
+}
+.blog .blog-container div p {
+    color: #5a5959;
+    padding: 20px 0;
+}
+.blog .blog-container div img {
+    width: 100%;
+}
+@media (max-width:991px) {
+    .blog .blog-container div {
+        width: 40%;
+    }
+    @media (max-width:768px) {
+        .blog .blog-container div {
+            width: 70%;
+        }
+    }
+}
+/*----------------------------------------------------- End blog-----------------------------------------------------*/
+/* ----------------------------------------------------- Start Contact----------------------------------------------------- */
+.contact {
+    width: 100%;
+}
+.contact .title h2 {
+    text-align: center;
+    margin-top: 40px;
+}
+.contact form {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+.feilds #f1,
+.feilds #f2 {
+    width: 46%;
+    padding: 10px;
+    margin: 2%;
+}
+.feilds #f3 {
+    width: 100%;
+    padding: 10px;
+    margin: 2%;
+}
+textarea {
+    width: 100%;
+    margin: 2%;
+    padding: 10px;
+}
+@media (max-width:991px) {
+    .feilds #f1,
+    .feilds #f2 {
+        width: 96%;
+        padding: 10px;
+        margin: 2%;
+    }
+}
+/* ----------------------------------------------------- End Contact----------------------------------------------------- */
+/* ----------------------------------------------------- start footer----------------------------------------------------- */
+footer {
+    padding: 50px 0px;
+    background-color: #333333;
+    color: #FFFFFF;
+    text-align: center;
+}
+footer i {
+    color: #FFFFFF;
+    padding: 10px;
+    transition: .5s;
+}
+footer p {
+    margin-top: 2px;
+}
+footer p a {
+    color: #FF305B;
+}
+footer i:hover {
+    color: #FF305B;
+}
+/* ----------------------------------------------------- end footer----------------------------------------------------- */
